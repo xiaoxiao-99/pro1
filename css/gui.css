@@ -1,0 +1,227 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f7f7f7;
+}
+a {
+    text-decoration: none;
+}
+#home-top{
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	height: 60px;
+	background-color: #d6d6d6;
+}
+#home-top div{
+	width: 200px;
+	text-align: center;
+	line-height: 60px;
+	font-family: "隶书";
+	font-size: 35px;
+}
+#home-top div a:link{
+	text-decoration: none;
+	color: #645657;
+}
+#home-top div a:visited{
+	text-decoration: none;
+	color:#645657;
+}
+#home-top div a:hover{
+	text-decoration: none;
+}
+#home-top div:hover{
+	background-color: #807d8e;
+}
+#home{
+	margin: 0 auto;
+	background-image:url(../img/1.jpg);
+	width:100%;
+	height: 798px;
+	background-attachment: fixed;
+}
+#text{
+	font-family:"隶书";
+	font-size: 150px;
+	color: #f1e9f1;
+	text-align: center;
+	padding-top: 160px;
+}
+#home button{
+	color:#d99e81;
+	font-family:"宋体";
+	border-radius: 7px;
+	font-size: 15px;
+	background-color:#f1e9f1;
+	border: solid;
+/* 	transition-duration: 0.4s; */
+	box-shadow:0px 0px 15px 8px #d99e81;
+	padding: 10px;
+	position: absolute;
+	top: 550px;
+	right: 550px;
+}
+#home button:hover{
+	box-shadow: 0px 0px 30px 10px #d99e81;
+	transition-duration: 0.4s;
+}
+#home button:active{
+	transform: translateY(6px);
+	transition-duration: 0.4s;
+}
+
+
+         
+.w {
+    overflow: hidden;
+    position: relative;
+    width: 720px;
+    height: 454px;
+    margin: 0px auto;
+}
+         
+ul li {
+    list-style: none;
+}
+         
+.main .focus ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 600%;
+}
+         
+.main .focus ul li {
+        float: left;
+}
+         
+.main .focus ul li img {
+    width: 720px;
+}
+         
+a[class^='arrow'] {
+    /* 开始时隐藏箭头 */
+    display: none;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 50px;
+	color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, .3);
+}
+         
+.arrow-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+         
+.arrow-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+         
+.main .focus ol {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, .5);
+}
+         
+.main .focus ol li {
+    cursor: pointer;
+    float: left;
+    margin: 6px 6.5px;
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+ }
+         
+.main .focus .current {
+    background-color: #f76211;
+}
+#father{
+	display: grid;
+	justify-content: center;
+	align-content: center; 
+	/* 4行2列 */
+	grid-template-rows: repeat(4,300px);
+	grid-template-columns: repeat(2,400px); 
+	/* border: 1px dashed; */
+	grid-gap: 10px; 
+}
+.box{
+	margin: 100px auto 0px;
+	width: 400px;
+	height: 300px;
+	/* background-color: red; */
+	position: relative;
+	overflow: hidden;
+}
+.box img{
+	width: 400px;
+	height: 300px;
+}
+
+.box:hover img{
+	/* 模糊 */
+	filter: blur(5px);
+}
+/* 文字*/
+.box::after{
+	content: "";
+	width: 500px;
+	height: 0;
+	/* height: 50px; */
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0; 
+	/* top: -25px; */
+	left: 0;
+	/* 设置旋转的基准线 */
+	transform-origin: left center;
+	/* 具体的角度值，去浏览器上试一试，然后填写 */
+	transform: rotate(37deg);
+	transition: all ease 0.5s;
+}
+/* 背景透明黑 */
+.box:hover::after{
+	height: 300px;
+	top: -150px;
+	background-color: rgba(0, 0, 0, 0.5);
+}			
+.box .txt{
+	/* border: 2px solid red; */
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	right: 60px;
+	color: #fff;
+	z-index: 1;
+	transform: rotate(30deg);
+	transition: all 0.5s;
+	opacity: 0;
+}
+.box .txt h3{
+	margin-bottom: 10px;
+}
+.box .txt p{
+	font-size: 14px;
+	line-height: 1.5em;
+}
+.box:hover .txt{
+	transform: rotate(0deg);
+	opacity: 1;
+}

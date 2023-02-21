@@ -1,0 +1,143 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ .clear{
+	 clear: both;
+ }
+	/* 首页 */
+#home-top{
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	height: 60px;
+	background-color: #ad9693;
+}
+#home-top div{
+	width: 200px;
+	text-align: center;
+	line-height: 60px;
+	font-family: "隶书";
+	font-size: 35px;
+}
+#home-top div a:link{
+	text-decoration: none;
+	color: #645657;
+}
+#home-top div a:visited{
+	text-decoration: none;
+	color:#645657;
+}
+#home-top div a:hover{
+	text-decoration: none;
+}
+#home-top div:hover{
+	background-color: #d99e81;
+}
+#home{
+	margin: 0 auto;
+	background-image:url(../img/1.jpg);
+	width:100%;
+	height: 798px;
+	background-attachment: fixed;
+}
+#text{
+	font-family:"隶书";
+	font-size: 150px;
+	color: #f1e9f1;
+	text-align: center;
+	padding-top: 160px;
+}
+#home button{
+	color:#d99e81;
+	font-family:"宋体";
+	border-radius: 7px;
+	font-size: 15px;
+	background-color:#f1e9f1;
+	border: solid;
+/* 	transition-duration: 0.4s; */
+	box-shadow:0px 0px 15px 8px #d99e81;
+	padding: 10px;
+	position: absolute;
+	top: 550px;
+	right: 550px;
+}
+#home button:hover{
+	box-shadow: 0px 0px 30px 10px #d99e81;
+	transition-duration: 0.4s;
+}
+#home button:active{
+	transform: translateY(6px);
+	transition-duration: 0.4s;
+}
+/* 第二页 */
+.box{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 0 auto;
+	/* height: 370px; */
+	/* border: 1px solid red; */
+	/* margin: 80px auto 0px; */
+	height: 800px;
+	background-image: url(../img/2.jpg);
+}
+.item{
+	margin-top: 200px;
+	width: 400px;
+	height: 300px;
+	/* height: 370px; */
+	/* border: 2px solid green; */
+	position: relative;
+	overflow: hidden;
+}
+.item img{
+	width: 400px;
+	height: 300px;
+	transition: all 0.5s;
+}
+.item .item-mask{
+	width: 400px;
+	height: 150px;
+	/* 渐变透明色 */
+	/* 上 0透明   下0.8 按照这样的顺序 */
+	background-image: linear-gradient(180deg,rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	transition: all 0.5s;
+				
+}
+.item .item-title{
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 250px;
+	left: 10px;
+	transition: all 0.5s;
+}
+.item .item-content{
+	color: #fff;
+	font-size: 12px;
+	/* border: 1px solid red; */
+	position: absolute;
+	text-align: justify;
+	top:310px;
+	left: 10px;
+	right: 20px;
+	transition: all 0.5s;
+}
+.item:hover img{
+	transform: scale(1.2);
+}
+.item:hover .item-mask{
+	transform: scale(1.2);
+}
+.item:hover .item-title{
+	top: 200px;
+}
+.item:hover .item-content{
+	top:235px;
+}

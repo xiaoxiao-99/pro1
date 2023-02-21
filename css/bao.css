@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f7f7f7;
+}
+a{
+ list-style: none;
+}
+li{
+ list-style: none;
+}
+#home-top{
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	height: 60px;
+	background-color: #d6d6d6;
+}
+#home-top div{
+	width: 200px;
+	text-align: center;
+	line-height: 60px;
+	font-family: "隶书";
+	font-size: 35px;
+}
+#home-top div a:link{
+	text-decoration: none;
+	color: #645657;
+}
+#home-top div a:visited{
+	text-decoration: none;
+	color:#645657;
+}
+#home-top div a:hover{
+	text-decoration: none;
+}
+#home-top div:hover{
+	background-color: #807d8e;
+}
+#home{
+	margin: 0 auto;
+	background-image:url(../img/1.jpg);
+	width:100%;
+	height: 798px;
+	background-attachment: fixed;
+}
+#text{
+	font-family:"隶书";
+	font-size: 150px;
+	color: #f1e9f1;
+	text-align: center;
+	padding-top: 160px;
+}
+#home button{
+	color:#d99e81;
+	font-family:"宋体";
+	border-radius: 7px;
+	font-size: 15px;
+	background-color:#f1e9f1;
+	border: solid;
+/* 	transition-duration: 0.4s; */
+	box-shadow:0px 0px 15px 8px #d99e81;
+	padding: 10px;
+	position: absolute;
+	top: 550px;
+	right: 550px;
+}
+#home button:hover{
+	box-shadow: 0px 0px 30px 10px #d99e81;
+	transition-duration: 0.4s;
+}
+#home button:active{
+	transform: translateY(6px);
+	transition-duration: 0.4s;
+}
+
+
+
+.lunbo{
+ width: 100%;
+}
+/* 和img的width和height一样，就可以让左右箭头和圆圈在正确的位置 */
+.content{
+ width: 850px;
+ height: 500px;
+ margin: 20px auto;
+ position: relative;
+}
+#item{
+ width: 100%;
+ height: 100%;
+  
+}
+.item{
+ position: absolute;
+ opacity: 0;
+ transition: all 1s;
+  
+}
+.item.active{
+ opacity:1;
+}
+.lunbo .content .item a img{
+ width: 850px;
+ height: 500px;
+}
+#btn-left{
+ width: 30px;
+ height: 69px;
+ font-size: 30px;
+ color: white;
+ background-color:rgba(0,0,0,0.4);
+ line-height: 69px;
+ padding-left:5px;
+ z-index: 10;/*始终显示在图片的上层*/
+ position: absolute;
+ left: 0;
+ top: 50%;
+ transform: translateY(-60%);/*使按钮向上偏移居中对齐*/
+ cursor: pointer;
+ opacity: 0;/*平时隐藏*/
+}
+.lunbo:hover #btn-left{
+ /*鼠标滑入，显示图标*/
+ opacity: 1;
+}
+ 
+#btn-right{
+ width: 26px;
+ height: 69px;
+ font-size: 30px;
+ color: white;
+ background-color:rgba(0,0,0,0.4);
+ line-height: 69px;
+ padding-left: 5px;
+ z-index: 10;
+ position: absolute;
+ right: 0;
+ top: 50%;
+ cursor: pointer;
+ opacity: 0;
+ transform: translateY(-60%);
+}
+.lunbo:hover #btn-right{
+ opacity: 1;
+}
+#circle{
+ height: 20px;
+ display: flex;
+ position: absolute;
+ bottom: 35px;
+ right: 25px;
+}
+.circle{
+ width: 10px;
+ height: 10px;
+ border-radius: 10px;
+ border: 2px solid white;
+ background: rgba(0,0,0,0.4);
+ cursor: pointer;
+ margin: 5px;
+}
+.white{
+ background-color: #FFFFFF;
+}
+
+#father{
+	display: grid;
+	justify-content: center;
+	align-content: center; 
+	/* 4行2列 */
+	grid-template-rows: repeat(4,300px);
+	grid-template-columns: repeat(2,400px); 
+	/* border: 1px dashed; */
+	grid-gap: 10px; 
+}
+.box:nth-child(1){
+	grid-row: 1/2;
+	grid-column:1/2;
+}
+.box:nth-child(2){
+	grid-row: 1/2;
+	grid-column:2/3;
+}
+.box:nth-child(3){
+	grid-row: 2/3;
+	grid-column:1/2;
+}
+.box:nth-child(4){
+	grid-row: 2/3;
+	grid-column:2/3;
+}
+.box:nth-child(5){
+	grid-row: 3/4;
+	grid-column:1/2;
+}
+
+.box:nth-child(6){
+	grid-row: 4/5;
+	grid-column:1/2;
+}
+.box:nth-child(7){
+	grid-row: 3/5;
+	grid-column:2/3;
+	width: 400px; 
+	height: 610px;
+}
+.box{
+	margin: 100px auto 0px;
+	width: 400px;
+	height: 300px;
+	/* background-color: red; */
+	position: relative;
+	overflow: hidden;
+}
+.box img{
+	width: 400px;
+	height: 300px;
+}
+.box:nth-child(7) img{
+	width: 400px;
+	height: 610px;
+}
+.box:hover img{
+	/* 模糊 */
+	filter: blur(5px);
+}
+/* 文字*/
+.box::after{
+	content: "";
+	width: 500px;
+	height: 0;
+	/* height: 50px; */
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0; 
+	/* top: -25px; */
+	left: 0;
+	/* 设置旋转的基准线 */
+	transform-origin: left center;
+	/* 具体的角度值，去浏览器上试一试，然后填写 */
+	transform: rotate(37deg);
+	transition: all ease 0.5s;
+}
+/* 背景透明黑 */
+.box:hover::after{
+	height: 300px;
+	top: -150px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.box:nth-child(7):hover::after{
+	height: 300px;
+	width: 800px;
+	top: -50px;
+	left: -90px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.box:nth-child(7) .txt{
+	/* border: 2px solid red; */
+	position: absolute;
+	top: 230px;
+	left: 60px;
+	right: 60px;
+	color: #fff;
+	z-index: 1;
+	transform: rotate(30deg);
+	transition: all 0.5s;
+	opacity: 0;
+}			
+.box .txt{
+	/* border: 2px solid red; */
+	position: absolute;
+	top: 80px;
+	left: 60px;
+	right: 60px;
+	color: #fff;
+	z-index: 1;
+	transform: rotate(30deg);
+	transition: all 0.5s;
+	opacity: 0;
+}
+.box .txt h3{
+	margin-bottom: 10px;
+}
+.box .txt p{
+	font-size: 14px;
+	line-height: 1.5em;
+}
+.box:hover .txt{
+	transform: rotate(0deg);
+	opacity: 1;
+}
